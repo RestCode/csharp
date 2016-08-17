@@ -68,7 +68,7 @@ Task dotnet-install {
 
 Task dotnet-restore {
 
-    exec { dotnet restore -v Minimal }
+    exec { dotnet restore -v Minimal -s All }
 }
 
 Task dotnet-build {
