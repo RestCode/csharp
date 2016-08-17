@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-
 		build-definition.ps1 = build-definition.ps1
 		Build.ps1 = Build.ps1
 		global.json = global.json
+		Nuget.config = Nuget.config
 		README.md = README.md
 	EndProjectSection
 EndProject
