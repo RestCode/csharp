@@ -8,7 +8,7 @@ Properties {
     $BuildConfiguration = "Release"
     
     # Package source
-    $NugetSource = @{ $true = "-s \"" + $env:NUGET_SOURCE + "\""; $false = 1 }[$env:NUGET_SOURCE -ne $NULL];
+    $NugetSource = @{ $true = $env:NUGET_SOURCE; $false = "https://nuget.org/api/v2/" }[$env:NUGET_SOURCE -ne $NULL];
 
     # The folder in which all output artifacts should be placed
     $ArtifactsPath = "artifacts"
@@ -71,7 +71,7 @@ Task dotnet-install {
 
 Task dotnet-restore {
 
-    exec { dotnet restore -v Minimal $NugetSource }
+    exec { dotnet restore -v Minimal -s $NugetSource }
 }
 
 Task dotnet-build {
