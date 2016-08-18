@@ -71,7 +71,7 @@ Task dotnet-install {
 
 Task dotnet-restore {
 
-    exec { dotnet restore -v Minimal -s $NugetSource }
+    exec { dotnet restore -v Debug }
 }
 
 Task dotnet-build {
