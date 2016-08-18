@@ -6,9 +6,6 @@ Properties {
     $BuildNumber = $tag + @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
     # The build configuration used for compilation
     $BuildConfiguration = "Release"
-    
-    # Package source
-    $NugetSource = @{ $true = $env:NUGET_SOURCE; $false = "https://nuget.org/api/v2/" }[$env:NUGET_SOURCE -ne $NULL];
 
     # The folder in which all output artifacts should be placed
     $ArtifactsPath = "artifacts"
@@ -71,7 +68,7 @@ Task dotnet-install {
 
 Task dotnet-restore {
 
-    exec { dotnet restore }
+    exec { dotnet restore -v Minimal }
 }
 
 Task dotnet-build {
