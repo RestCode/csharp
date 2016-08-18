@@ -71,7 +71,7 @@ Task dotnet-install {
 
 Task dotnet-restore {
 
-    exec { dotnet restore -v Debug }
+    exec { dotnet restore }
 }
 
 Task dotnet-build {
