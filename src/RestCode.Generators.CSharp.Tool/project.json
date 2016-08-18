@@ -1,0 +1,26 @@
+﻿{
+  "version": "0.0.1-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "outputName": "dotnet-restcode-csharp"
+  },
+
+  "dependencies": {
+    "Microsoft.Extensions.CommandLineUtils": "1.0.0",
+    "Microsoft.NETCore.App": {
+      "version": "1.0.0",
+      "type": "platform"
+    }
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  },
+  "runtimes": {
+    "win10-x64": {},
+    "win81-x64": {},
+    "win8-x64": {},
+    "win7-x64": {}
+  }
+}
