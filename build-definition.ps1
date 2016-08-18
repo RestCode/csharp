@@ -8,7 +8,7 @@ Properties {
     $BuildConfiguration = "Release"
     
     # Package source
-    $NugetSource = @{ $true = "-s " + $env:NUGET_SOURCE; $false = 1 }[$env:NUGET_SOURCE -ne $NULL];
+    $NugetSource = @{ $true = "-s \"" + $env:NUGET_SOURCE + "\""; $false = 1 }[$env:NUGET_SOURCE -ne $NULL];
 
     # The folder in which all output artifacts should be placed
     $ArtifactsPath = "artifacts"
